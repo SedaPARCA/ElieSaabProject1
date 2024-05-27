@@ -21,7 +21,11 @@ public class Locators extends Events {
     @FindBy(css = "[name='email']")
     public WebElement Email;
 
+    @FindBy(xpath = "(//*[@class='rez_customBtn__DWbKh'])[2]")
+    public WebElement RegisterInterestbutton;
 
+    @FindBy(xpath = "//h1[text()='THANK YOU']")
+    public WebElement ThankYouText;
 
 
 }
