@@ -9,7 +9,8 @@ import io.cucumber.testng.CucumberOptions;
         features = {"src/test/java/FeatureFiles"},
         glue={"StepDefinitions"},
         plugin = {"pretty", "html:target/cucumber-reports.html",
-     "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+     "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "json:target/cucumber/cucumber.json"}
 )
 
 public class SmokeTest extends AbstractTestNGCucumberTests{
