@@ -30,6 +30,7 @@
             <artifactId>cucumber-java</artifactId>
             <version>7.9.0</version>
             <scope>test</scope>
+
         </dependency>
 
         <!--    bana bi testNG-->
@@ -142,13 +143,28 @@
                     </includes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-testng</artifactId>
+                <version>7.9.0</version>
+                <executions>
+                    <execution>
+                        <id>execute-tests</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>cucumber</goal>
+                        </goals>
+                        <configuration>
+                            <glue>com.example.stepdefinitions</glue>
+                            <format>json:target/cucumber.json</format>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
+
+
     </build>
-
-
-
-
-
-
 
 </project>

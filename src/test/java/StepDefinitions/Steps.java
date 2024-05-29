@@ -51,7 +51,7 @@ public class Steps {
     @Given("Get Request Data From Backend")
     public void getRequestDataFromBackend() {
    //Burası mantıklı mı? yani aşağıdaki url i girdikten sonras hep bu cavbı verir zaten, bunun bir önceki form kaydıyla ne alakası var.
-     apiResponse = RestAssured.get("https://terminal.tremglobal.com/form/save.php?q=basvuru&name=Seda Parça&phone=905350356773&email=seda.parca@tremglobal.com&medium=99");  // Api ye istek.
+     apiResponse = RestAssured.get("https://terminal.tremglobal.com/form/save.php?q=basvuru&name=Seda%20Par%C3%A7a&phone=905350356773&email=seda.parca%40tremglobal.com&medium=99");  // Api ye istek.
 
     }
 
