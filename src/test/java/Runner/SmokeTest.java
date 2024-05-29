@@ -8,9 +8,12 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@SmokeTest",
         features = {"src/test/java/FeatureFiles"},
         glue={"StepDefinitions"},
-        plugin = {"pretty", "html:target/cucumber-reports.html",
-     "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-                "json:target/cucumber/cucumber.json"}
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" } // cucumber report
+        //
+        // html:target/site/cucumber-pretty.html
+       //pretty","json:target/cucumber/cucumber.json jenkins için
+       // "html:target/cucumber-reports.html" // basit rapor.
+      //  "",
 )
 
 public class SmokeTest extends AbstractTestNGCucumberTests{
