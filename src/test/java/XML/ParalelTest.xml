@@ -1,0 +1,32 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mySuit" parallel="tests" thread-count="3">
+
+    <test name="myTest1">
+        <parameter name="browserTipi" value="edge"></parameter>
+
+        <classes>
+            <class name="Runner.SmokeTest"> </class>
+        </classes>
+
+    </test>
+
+    <test name="myTest2">
+        <parameter name="browserTipi" value="firefox"></parameter>
+
+        <classes>
+            <class name="Runner.SmokeTest"> </class>
+        </classes>
+
+    </test>
+
+    <test name="myTest3">
+        <parameter name="browserTipi" value="chrome"></parameter>
+
+        <classes>
+            <class name="Runner.SmokeTest"> </class>
+        </classes>
+
+    </test>
+
+</suite>

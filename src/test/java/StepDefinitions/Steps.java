@@ -71,13 +71,41 @@ public class Steps {
 
         Assert.assertEquals("true", message);
 
-        // Değerleri yazdır, bunu daha sonra kaldırabilirsin.
-        //   System.out.println("message: " + message);
-        //  System.out.println("basvuru_id: " + basvuruId);
+    }
+
+
+    @And("Check the Fields on the Form")
+    public void checkTheFieldsOnTheForm() {
+
+    Assert.assertTrue(lc.NameSurname.isDisplayed());
+    Assert.assertTrue(lc.Email.isDisplayed());
+    Assert.assertTrue(lc.PhoneNumber.isDisplayed());
+
+    }
+
+    @Then("Check the Registered Interested Button")
+    public void checkTheRegisteredInterestedButton() {
+
+    Assert.assertTrue(lc.RegisterInterestbutton.isDisplayed());
 
     }
 
 
+    @And("Leave the Phone Number Field on the Form Blank")
+    public void leaveThePhoneNumberFieldOnTheFormBlank() {
+
+        lc.mySendKeys(lc.NameSurname,"Seda Parça");
+        lc.mySendKeys(lc.Email,"sedaparca.93@gmail.com");
+        lc.mySendKeys(lc.PhoneNumber," ");
+        lc.verifyContainsText(lc.InvalidPhoneNumber, "Invalid Phone Number");
+    }
+
+    @And("Enter an invalid number in the Phone Number field on the form.")
+    public void enterAnInvalidNumberInThePhoneNumberFieldOnTheForm() {
+
+        lc.mySendKeys(lc.PhoneNumber,"222");
+        lc.verifyContainsText(lc.InvalidPhoneNumber, "Invalid Phone Number");
+    }
 }
 
 

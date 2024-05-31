@@ -27,5 +27,7 @@ public class Locators extends Events {
     @FindBy(xpath = "//h1[text()='THANK YOU']")
     public WebElement ThankYouText;
 
+    @FindBy(xpath = "//*[text()='Invalid Phone Number']")
+    public WebElement InvalidPhoneNumber;
 
 }

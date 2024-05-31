@@ -1,6 +1,5 @@
 package Runner;
 import StepDefinitions.GWD;
-import com.aventstack.extentreports.service.ExtentService; //bunu neden aktive edemiyorum?
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.BeforeClass;
@@ -19,14 +18,8 @@ import org.testng.annotations.Parameters;
       //  "",
 )
 
-public class SmokeTest extends AbstractTestNGCucumberTests{
+public class ParalelTest extends AbstractTestNGCucumberTests{
 
-    @BeforeClass
-    @Parameters("browserTipi")
-    public void beforeClass(String browserName)
-    {
-        GWD.threadBrowserName.set(browserName);
-    }
 
 
 
