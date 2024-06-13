@@ -16,6 +16,7 @@ Feature: Frontend
   And Enter an invalid number in the Phone Number field on the form.
   Then Click Registered Interested Button
 
+  @Priority=1
   @SmokeTest
   Scenario: Successful registration of the form
   And Fill the Form

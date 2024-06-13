@@ -6,22 +6,19 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 @CucumberOptions(
-        // aşağıdaki bütün testlerden @SmokeTest tag i olanları çalıştır
+
         tags = "@SmokeTest",
         features = {"src/test/java/FeatureFiles"},
         glue={"StepDefinitions"},
-        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" } // cucumber report
-        //
-        // html:target/site/cucumber-pretty.html
-       //pretty","json:target/cucumber/cucumber.json jenkins için
-       // "html:target/cucumber-reports.html" // basit rapor.
-      //  "",
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }
 )
 
-public class ParalelTest extends AbstractTestNGCucumberTests{
+public class ParalelTest extends AbstractTestNGCucumberTests {
 
+    @BeforeClass
+    @Parameters("browserTipi")
+    public void beforeClass(String browserName) {
+        GWD.threadBrowserName.set(browserName);
 
-
-
-
+    }
 }

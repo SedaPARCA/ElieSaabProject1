@@ -139,7 +139,7 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <includes>
-                        **/Runner.java
+                        **/SmokeTest.java
                     </includes>
                 </configuration>
             </plugin>

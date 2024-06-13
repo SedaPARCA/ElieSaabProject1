@@ -1,6 +1,5 @@
 package StepDefinitions;
 
-import Pages.Events;
 import Pages.Locators;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -10,7 +9,6 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
-import static io.restassured.RestAssured.given;
 import org.json.JSONObject;
 
 public class Steps {
@@ -50,7 +48,6 @@ public class Steps {
 
     @Given("Get Request Data From Backend")
     public void getRequestDataFromBackend() {
-   //Burası mantıklı mı? yani aşağıdaki url i girdikten sonras hep bu cavbı verir zaten, bunun bir önceki form kaydıyla ne alakası var.
      apiResponse = RestAssured.get("https://terminal.tremglobal.com/form/save.php?q=basvuru&name=Seda%20Par%C3%A7a&phone=905350356773&email=seda.parca%40tremglobal.com&medium=99");  // Api ye istek.
 
     }
@@ -72,6 +69,9 @@ public class Steps {
         Assert.assertEquals("true", message);
 
     }
+
+
+
 
 
     @And("Check the Fields on the Form")

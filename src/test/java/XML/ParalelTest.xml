@@ -2,29 +2,29 @@
 
 <suite name="mySuit" parallel="tests" thread-count="3">
 
-    <test name="myTest1">
+    <test name="Edge">
         <parameter name="browserTipi" value="edge"></parameter>
 
         <classes>
-            <class name="Runner.SmokeTest"> </class>
+            <class name="Runner.ParalelTest"> </class>
         </classes>
 
     </test>
 
-    <test name="myTest2">
+    <test name="Firefox">
         <parameter name="browserTipi" value="firefox"></parameter>
 
         <classes>
-            <class name="Runner.SmokeTest"> </class>
+            <class name="Runner.ParalelTest"> </class>
         </classes>
 
     </test>
 
-    <test name="myTest3">
+    <test name="Chrome">
         <parameter name="browserTipi" value="chrome"></parameter>
 
         <classes>
-            <class name="Runner.SmokeTest"> </class>
+            <class name="Runner.ParalelTest"> </class>
         </classes>
 
     </test>
