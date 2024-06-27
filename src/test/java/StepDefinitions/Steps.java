@@ -27,7 +27,7 @@ public class Steps {
     JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
     js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     lc.mySendKeys(lc.NameSurname,"Seda Parça");
-    lc.mySendKeys(lc.PhoneNumber,"5350356773");
+    lc.mySendKeys(lc.PhoneNumber,"535035677xx");
     lc.mySendKeys(lc.Email,"seda.parca@tremglobal.com");
 
     }
