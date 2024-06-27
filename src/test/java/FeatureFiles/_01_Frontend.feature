@@ -4,6 +4,10 @@ Feature: Frontend
   Background:
   Given Navigate to Url
 
+  @LoginTest
+  Scenario:Navigate to URL
+  Given Verification of Access to the Page
+
   Scenario: The visibility of the form fields
   And Check the Fields on the Form
   Then Check the Registered Interested Button
@@ -16,7 +20,6 @@ Feature: Frontend
   And Enter an invalid number in the Phone Number field on the form.
   Then Click Registered Interested Button
 
-  @Priority=1
   @SmokeTest
   Scenario: Successful registration of the form
   And Fill the Form

@@ -208,7 +208,7 @@
         </profile>
 
         <profile>
-            <id>ParalelTest</id>
+            <id>LoginTest</id>
             <build>
                 <plugins>
                     <plugin>
@@ -229,7 +229,7 @@
                         <version>3.0.0-M5</version>
                         <configuration>
                             <includes>
-                                **/ParalelTest.java
+                                **/LoginTest.java
                             </includes>
                         </configuration>
                     </plugin>

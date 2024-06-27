@@ -4,14 +4,14 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-        tags = "@SmokeTest",
+        tags = "@LoginTest",
         features = {"src/test/java/FeatureFiles"},
         glue={"StepDefinitions"},
         plugin = {"json:target/cucumber/cucumber.json" }
 
 )
 
-public class SmokeTest extends AbstractTestNGCucumberTests{
+public class LoginTest extends AbstractTestNGCucumberTests{
 
 
     }

@@ -7,11 +7,11 @@ import io.cucumber.testng.CucumberOptions;
         tags = "@SmokeTest",
         features = {"src/test/java/FeatureFiles"},
         glue={"StepDefinitions"},
-        plugin = {"json:target/cucumber/cucumber.json" }
+        plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }
 
 )
 
-public class SmokeTest extends AbstractTestNGCucumberTests{
+public class SmokeTest1 extends AbstractTestNGCucumberTests{
 
 
     }

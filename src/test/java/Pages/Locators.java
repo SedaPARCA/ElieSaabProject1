@@ -30,4 +30,7 @@ public class Locators extends Events {
     @FindBy(xpath = "//*[text()='Invalid Phone Number']")
     public WebElement InvalidPhoneNumber;
 
+    @FindBy(xpath = "//*[text()='BOSPHORUS SPLENDOR']")
+    public WebElement BOSPHORUSsPLENDORtEXT;
+
 }

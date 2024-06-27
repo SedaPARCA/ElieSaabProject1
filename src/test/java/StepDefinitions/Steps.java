@@ -19,13 +19,13 @@ public class Steps {
     @Given("Navigate to Url")
     public void navigateToUrl() {
         GWD.getDriver().get("https://eliesaabbosphorus.com");
-        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-    }
 
+    }
 
     @And("Fill the Form")
     public void fillTheForm() {
+    JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     lc.mySendKeys(lc.NameSurname,"Seda Parça");
     lc.mySendKeys(lc.PhoneNumber,"5350356773");
     lc.mySendKeys(lc.Email,"seda.parca@tremglobal.com");
@@ -36,7 +36,6 @@ public class Steps {
     public void clickRegisteredInterestedButton() {
 
       lc.myJsClick(lc.RegisterInterestbutton);
-
     }
 
     @Then("Verify Success message")
@@ -70,10 +69,6 @@ public class Steps {
 
     }
 
-
-
-
-
     @And("Check the Fields on the Form")
     public void checkTheFieldsOnTheForm() {
 
@@ -105,6 +100,11 @@ public class Steps {
 
         lc.mySendKeys(lc.PhoneNumber,"222");
         lc.verifyContainsText(lc.InvalidPhoneNumber, "Invalid Phone Number");
+    }
+
+    @Given("Verification of Access to the Page")
+    public void verificationOfAccessToThePage() {
+    lc.verifyContainsText(lc.BOSPHORUSsPLENDORtEXT,"BOSPHORUS SPLENDOR");
     }
 }
 
