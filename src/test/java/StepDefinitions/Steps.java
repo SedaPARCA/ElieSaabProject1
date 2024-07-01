@@ -27,7 +27,7 @@ public class Steps {
     JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
     js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     lc.mySendKeys(lc.NameSurname,"TestAutomation");
-    lc.mySendKeys(lc.PhoneNumber,"05520000000");
+    lc.mySendKeys(lc.PhoneNumber,"5520000000");
     lc.mySendKeys(lc.Email,"testautomation@tremglobal.com");
 
     }
@@ -47,7 +47,7 @@ public class Steps {
 
     @Given("Get Request Data From Backend")
     public void getRequestDataFromBackend() {
-     apiResponse = RestAssured.get("https://terminal.tremglobal.com/form/save.php?q=basvuru&name=Seda%20Par%C3%A7a&phone=905350356773&email=seda.parca%40tremglobal.com&medium=99");  // Api ye istek.
+     apiResponse = RestAssured.get("https://terminal.tremglobal.com/form/save.php?q=basvuru&name=TestAutomation&phone=905520000000&medium=99");  // Api ye istek.
 
     }
 
