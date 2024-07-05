@@ -7,20 +7,21 @@ Feature: Frontend
   @LoginTest
   Scenario:Navigate to URL
   Given Verification of Access to the Page
-
   Scenario: The visibility of the form fields
   And Check the Fields on the Form
   Then Check the Registered Interested Button
 
+  @RegressionTest
   Scenario: Leaving the Required Field Blank
   And Leave the Phone Number Field on the Form Blank
   Then Click Registered Interested Button
 
+  @RegressionTest
   Scenario: Invalid phone number entered
   And Enter an invalid number in the Phone Number field on the form.
   Then Click Registered Interested Button
 
-  @SmokeTest
+  @SmokeTest @RegressionTest
   Scenario: Successful registration of the form
   And Fill the Form
   Then Click Registered Interested Button

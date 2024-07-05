@@ -20,6 +20,7 @@ public class Steps {
     public void navigateToUrl() {
         GWD.getDriver().get("https://eliesaabbosphorus.com");
 
+
     }
 
     @And("Fill the Form")
